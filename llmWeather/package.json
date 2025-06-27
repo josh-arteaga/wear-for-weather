@@ -1,0 +1,15 @@
+{
+  "name": "llmweather",
+  "version": "1.0.0",
+  "description": "A project for weather and LLM integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'No start script defined.'"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "npx": "^3.0.0"
+  }
+}

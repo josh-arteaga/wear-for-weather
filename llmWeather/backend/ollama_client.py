@@ -4,7 +4,7 @@ from typing import List, Dict
 
 # Configure the LLM
 OLLAMA_URL  = os.getenv("OLLAMA_URL",  "http://localhost:11434/api/generate")
-MODEL       = os.getenv("OLLAMA_MODEL", "llama3")
+MODEL       = os.getenv("OLLAMA_MODEL", "phi3:mini")
 
 # Re-use a single HTTP client (faster, fewer sockets)
 _client = httpx.AsyncClient(timeout=30)

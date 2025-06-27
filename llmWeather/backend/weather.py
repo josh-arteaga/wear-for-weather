@@ -13,6 +13,7 @@ async def fetch_weather(lat: float, lon: float, hours: int = 72) -> List[Dict]:
         "days": 3,
         "aqi": "no",
         "alerts": "no",
+        "key": WEATHER_API_KEY,
     }
 
     try:

@@ -11,3 +11,5 @@ Fleshed out the weather and Ollama clients with ChatGPT's help generating and Co
 
 Found out about JavaScript's Geolocation API for the frontend to send user geolocation data to FastAPI backend
 Need to add this frontend logic in my very basic HTML file.
+
+Imported ollama and weather client's copilot renamed my client's to be uniquely named imports in main.py

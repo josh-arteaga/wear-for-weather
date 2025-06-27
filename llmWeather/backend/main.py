@@ -1,8 +1,8 @@
 # filepath: backend/main.py
 from fastapi import FastAPI, Query
 from dotenv import load_dotenv
-from backend.weather import fetch_weather
-from backend.ollama_client import outfit_rec
+from backend.weather import fetch_weather, _client as weather_client
+from backend.ollama_client import outfit_rec, _client as ollama_client
 import os
 
 load_dotenv(dotenv_path="../.env")  # Loads variables from your .env file
@@ -25,3 +25,11 @@ async def read_root(
         "hours": hours,
         "outfit_recommendation": outfit
     }
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    """
+    Cleanup resources on shutdown.
+    """
+    await weather_client.aclose()
+    await ollama_client.aclose()
