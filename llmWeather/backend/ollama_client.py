@@ -68,7 +68,8 @@ async def outfit_rec(hourly: List[Dict]) -> str:
             json={
                 "model" : MODEL,
                 "prompt": prompt,
-                "stream": False  # simpler—wait for full response
+                "stream": False,  # simpler—wait for full response
+                "options":{"temperature":0.7,"num_predict":60}
             },
         )
         resp.raise_for_status()

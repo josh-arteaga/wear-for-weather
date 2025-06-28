@@ -13,3 +13,11 @@ Found out about JavaScript's Geolocation API for the frontend to send user geolo
 Need to add this frontend logic in my very basic HTML file.
 
 Imported ollama and weather client's copilot renamed my client's to be uniquely named imports in main.py
+
+Enable CORS in FastAPI
+
+Had a .env hiccup. Found out an API key needs to be called using os.getenv() when a python file needs it
+Found out about hardcoded parent[] parameters and how the location of your .env will affect the call
+
+Realized I used weather API as my API endpoint and not Open Weather. Kept getting 401 errors when testing the endpoint.
+

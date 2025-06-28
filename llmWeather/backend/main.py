@@ -1,5 +1,6 @@
 # filepath: backend/main.py
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from backend.weather import fetch_weather, _client as weather_client
 from backend.ollama_client import outfit_rec, _client as ollama_client
@@ -8,6 +9,14 @@ import os
 load_dotenv(dotenv_path="../.env")  # Loads variables from your .env file
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins (dev only)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def read_root(
