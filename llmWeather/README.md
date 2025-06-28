@@ -25,3 +25,4 @@ ChatGPT provided new index.jsx file, forgot to commit project before resetting s
 
 Used ChatGPT and Copilot to create  src/components/WeatherOutfit.jsx, index.css for tailwind
 
+Another git issue, I had my .gitignore file saved as ..gitignore, might need to increase zoom😅
