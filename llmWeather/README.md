@@ -21,3 +21,7 @@ Found out about hardcoded parent[] parameters and how the location of your .env 
 
 Realized I used weather API as my API endpoint and not Open Weather. Kept getting 401 errors when testing the endpoint.
 
+ChatGPT provided new index.jsx file, forgot to commit project before resetting sytem to run WSL
+
+Used ChatGPT and Copilot to create  src/components/WeatherOutfit.jsx, index.css for tailwind
+
