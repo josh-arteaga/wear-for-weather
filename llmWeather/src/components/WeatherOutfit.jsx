@@ -15,7 +15,7 @@ export default function WeatherOutfit() {
     setWeather(null);
     setRecommendation('');
     try {
-      const weatherRes = await fetch(`/weather?lat=${lat}&lon=${lon}`);
+      const weatherRes = await fetch(`http://127.0.0.1:8000/weather?lat=${lat}&lon=${lon}`);
       if (!weatherRes.ok) throw new Error(`Weather fetch ${weatherRes.status}`);
       const weatherData = await weatherRes.json();
       setWeather(weatherData);

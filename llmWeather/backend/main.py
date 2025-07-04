@@ -1,10 +1,9 @@
-# filepath: backend/main.py
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
+from typing import List, Dict
 from dotenv import load_dotenv
 from backend.weather import fetch_weather, _client as weather_client
 from backend.ollama_client import outfit_rec, _client as ollama_client
-import os
 
 load_dotenv(dotenv_path="../.env")  # Loads variables from your .env file
 
@@ -30,10 +29,23 @@ async def read_root(
     outfit = await outfit_rec(weather_data)
     # Return the resulting message
     return {
-        "location": {"lat": lat,"lon": lon},
+        "location": {"lat": lat, "lon": lon},
         "hours": hours,
         "outfit_recommendation": outfit
     }
+
+@app.get("/weather")
+async def get_weather(
+    lat: float = Query(..., description="Latitude"),
+    lon: float = Query(..., description="Longitude"),
+    hours: int = Query(12, description="Number of forecasted hours")
+):
+    return await fetch_weather(lat, lon, hours)
+
+@app.post("/recommend")
+async def post_recommend(payload: List[Dict] = Body(...)):
+    """Expects the exact hourly list that /weather returns."""
+    return await outfit_rec(payload)
 
 @app.on_event("shutdown")
 async def shutdown_event():

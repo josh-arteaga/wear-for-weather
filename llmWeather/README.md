@@ -30,3 +30,11 @@ Having issues with getting front end properly configured with vite
 Working geolocation in the frontend, trying to find out why LLM call isn't fully going through with dev console in browser and ChatGPT explaining. 
 
 Removed geolocation from browser view into console log
+
+Importing weather card widget === "https://codepen.io/VoXelo/pen/XJJwjqO"
+
+WeatherCard.jsx implemented in vanilla JS, using CoPilot agent to refactor and test GUI printout of JSON data.
+
+Removed Three.js animation and 3-D clouds from Weather Card graphic.
+
+Finding out why the Open Weather API call isn't being made anymore
