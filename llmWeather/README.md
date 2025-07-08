@@ -26,3 +26,9 @@ ChatGPT provided new index.jsx file, forgot to commit project before resetting s
 Used ChatGPT and Copilot to create  src/components/WeatherOutfit.jsx, index.css for tailwind
 
 Another git issue, I had my .gitignore file saved as ..gitignore, might need to increase zoom😅
+
+Having another API issue with OpenWeather. Not sure if it's URL endpoint or the API key as I'm getting both 404 and 401 errors when messing with OpenWeather's "One Call" endpoint versions. Not sure why this is happening, since the test commands I ran with my current credentials tested true last time I tried. Consulting with ChatGPT again.
+
+Downloaded Postman for a better visual of API testing.
+
+Used new API key, for some reason the one I had set wasn't working anymore. Tested Austin,TX coordinates and got back full forecast respsonse. 
